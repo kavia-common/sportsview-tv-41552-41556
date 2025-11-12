@@ -1,17 +1,15 @@
 package org.example.app.tv
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -84,14 +82,12 @@ fun HomeScreen() {
         .fillMaxSize()
         .background(MaterialTheme.colorScheme.background)
 
-    Column(
+    // Avoid inline composables like Box/Column from foundation-layout for now.
+    // Render a centered-ish Text using full-width text alignment as a simple placeholder.
+    Text(
+        text = "SportsNow TV - Home",
         modifier = modifier,
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(
-            text = "SportsNow TV - Home",
-            color = MaterialTheme.colorScheme.onBackground
-        )
-    }
+        color = MaterialTheme.colorScheme.onBackground,
+        textAlign = TextAlign.Center
+    )
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+    <!-- Background -->
+    <path
+        android:fillColor="#101317"
+        android:pathData="M0,0h320v180h-320z" />
+    <!-- Accent stripe -->
+    <path
+        android:fillColor="#3B82F6"
+        android:pathData="M0,160h320v20h-320z" />
+    <path
+        android:fillColor="#06B6D4"
+        android:pathData="M0,150h280v6h-280z" />
+    <!-- Simple "SportsNow TV" text-like blocks (vector-safe placeholder) -->
+    <path
+        android:fillColor="#E5E7EB"
+        android:pathData="M24,60h80v12h-80z" />
+    <path
+        android:fillColor="#E5E7EB"
+        android:pathData="M24,80h140v8h-140z" />
+    <path
+        android:fillColor="#9CA3AF"
+        android:pathData="M24,98h180v6h-180z" />
+</vector>
