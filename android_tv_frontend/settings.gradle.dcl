@@ -40,6 +40,11 @@ defaults {
         minSdk = 30
 
         testing {
+            options {
+                unitTests {
+                    failOnNoDiscoveredTests = false
+                }
+            }
             dependencies {
                 implementation("org.junit.jupiter:junit-jupiter:5.10.2")
                 runtimeOnly("org.junit.platform:junit-platform-launcher")
