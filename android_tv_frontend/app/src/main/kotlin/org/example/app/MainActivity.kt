@@ -1,28 +1,27 @@
 package org.example.app
 
-import org.apache.commons.text.WordUtils
-
-import org.example.list.LinkedList
-import org.example.utilities.SplitUtils
-import org.example.utilities.StringUtils
-
-import android.widget.TextView
 import android.os.Bundle
-import android.app.Activity
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import org.example.app.tv.SportsNowTvApp
 
-class MainActivity : Activity() {
+/**
+ * PUBLIC_INTERFACE
+ * MainActivity is the single-activity entry point of the app.
+ * It uses Jetpack Compose to render the UI by setting the root composable [SportsNowTvApp].
+ */
+class MainActivity : ComponentActivity() {
+
+    /**
+     * PUBLIC_INTERFACE
+     * Lifecycle onCreate: sets the Compose content to the app root.
+     *
+     * @param savedInstanceState previously saved state bundle
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        val textView = findViewById(R.id.textView) as TextView
-        textView.text = buildMessage()
-    }
-
-    private fun buildMessage(): String {
-        val tokens: LinkedList
-        tokens = SplitUtils.split(MessageUtils.message())
-        val result: String = StringUtils.join(tokens)
-        return WordUtils.capitalize(result)
+        setContent {
+            SportsNowTvApp()
+        }
     }
 }
