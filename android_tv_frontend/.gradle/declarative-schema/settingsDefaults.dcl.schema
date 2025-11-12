@@ -633,6 +633,20 @@
                 },
                 {
                     "type": "dataProperty",
+                    "name": "targetSdk",
+                    "valueType": {
+                        "type": "dataTypeRefType",
+                        "dataType": {
+                            "type": "int"
+                        }
+                    },
+                    "mode": {
+                        "type": "org.gradle.internal.declarativedsl.analysis.DefaultDataProperty.DefaultPropertyMode.DefaultWriteOnly"
+                    },
+                    "hasDefaultValue": true
+                },
+                {
+                    "type": "dataProperty",
                     "name": "compileSdk",
                     "valueType": {
                         "type": "dataTypeRefType",
@@ -648,20 +662,6 @@
                 {
                     "type": "dataProperty",
                     "name": "jdkVersion",
-                    "valueType": {
-                        "type": "dataTypeRefType",
-                        "dataType": {
-                            "type": "int"
-                        }
-                    },
-                    "mode": {
-                        "type": "org.gradle.internal.declarativedsl.analysis.DefaultDataProperty.DefaultPropertyMode.DefaultWriteOnly"
-                    },
-                    "hasDefaultValue": true
-                },
-                {
-                    "type": "dataProperty",
-                    "name": "targetSdk",
                     "valueType": {
                         "type": "dataTypeRefType",
                         "dataType": {
@@ -971,7 +971,7 @@
                             "simpleName": "AndroidApplication"
                         }
                     },
-                    "simpleName": "licenses",
+                    "simpleName": "hilt",
                     "parameters": [],
                     "isDirectAccessOnly": false,
                     "semantics": {
@@ -983,7 +983,7 @@
                                 "fqName": {
                                     "type": "org.gradle.internal.declarativedsl.analysis.DefaultFqName",
                                     "packageName": "org.gradle.api.experimental.android.extensions",
-                                    "simpleName": "Licenses"
+                                    "simpleName": "Hilt"
                                 }
                             }
                         },
@@ -1005,7 +1005,7 @@
                             "simpleName": "AndroidApplication"
                         }
                     },
-                    "simpleName": "lint",
+                    "simpleName": "licenses",
                     "parameters": [],
                     "isDirectAccessOnly": false,
                     "semantics": {
@@ -1016,8 +1016,8 @@
                                 "type": "dataTypeRefName",
                                 "fqName": {
                                     "type": "org.gradle.internal.declarativedsl.analysis.DefaultFqName",
-                                    "packageName": "org.gradle.api.experimental.common.extensions",
-                                    "simpleName": "Lint"
+                                    "packageName": "org.gradle.api.experimental.android.extensions",
+                                    "simpleName": "Licenses"
                                 }
                             }
                         },
@@ -1073,7 +1073,7 @@
                             "simpleName": "AndroidApplication"
                         }
                     },
-                    "simpleName": "hilt",
+                    "simpleName": "lint",
                     "parameters": [],
                     "isDirectAccessOnly": false,
                     "semantics": {
@@ -1084,8 +1084,8 @@
                                 "type": "dataTypeRefName",
                                 "fqName": {
                                     "type": "org.gradle.internal.declarativedsl.analysis.DefaultFqName",
-                                    "packageName": "org.gradle.api.experimental.android.extensions",
-                                    "simpleName": "Hilt"
+                                    "packageName": "org.gradle.api.experimental.common.extensions",
+                                    "simpleName": "Lint"
                                 }
                             }
                         },
@@ -5356,16 +5356,16 @@
         {
             "type": "org.gradle.internal.declarativedsl.analysis.DefaultFqName",
             "packageName": "org.gradle.api.experimental.android.extensions",
-            "simpleName": "Licenses"
+            "simpleName": "Hilt"
         },
         {
             "type": "data",
             "name": {
                 "type": "org.gradle.internal.declarativedsl.analysis.DefaultFqName",
                 "packageName": "org.gradle.api.experimental.android.extensions",
-                "simpleName": "Licenses"
+                "simpleName": "Hilt"
             },
-            "javaTypeName": "org.gradle.api.experimental.android.extensions.Licenses",
+            "javaTypeName": "org.gradle.api.experimental.android.extensions.Hilt",
             "javaTypeArgumentTypeNames": [],
             "supertypes": [
                 {
@@ -5395,17 +5395,17 @@
         },
         {
             "type": "org.gradle.internal.declarativedsl.analysis.DefaultFqName",
-            "packageName": "org.gradle.api.experimental.common.extensions",
-            "simpleName": "Lint"
+            "packageName": "org.gradle.api.experimental.android.extensions",
+            "simpleName": "Licenses"
         },
         {
             "type": "data",
             "name": {
                 "type": "org.gradle.internal.declarativedsl.analysis.DefaultFqName",
-                "packageName": "org.gradle.api.experimental.common.extensions",
-                "simpleName": "Lint"
+                "packageName": "org.gradle.api.experimental.android.extensions",
+                "simpleName": "Licenses"
             },
-            "javaTypeName": "org.gradle.api.experimental.common.extensions.Lint",
+            "javaTypeName": "org.gradle.api.experimental.android.extensions.Licenses",
             "javaTypeArgumentTypeNames": [],
             "supertypes": [
                 {
@@ -5418,34 +5418,6 @@
                 {
                     "type": "dataProperty",
                     "name": "enabled",
-                    "valueType": {
-                        "type": "dataTypeRefType",
-                        "dataType": {
-                            "type": "boolean"
-                        }
-                    },
-                    "mode": {
-                        "type": "org.gradle.internal.declarativedsl.analysis.DefaultDataProperty.DefaultPropertyMode.DefaultWriteOnly"
-                    },
-                    "hasDefaultValue": true
-                },
-                {
-                    "type": "dataProperty",
-                    "name": "xmlReport",
-                    "valueType": {
-                        "type": "dataTypeRefType",
-                        "dataType": {
-                            "type": "boolean"
-                        }
-                    },
-                    "mode": {
-                        "type": "org.gradle.internal.declarativedsl.analysis.DefaultDataProperty.DefaultPropertyMode.DefaultWriteOnly"
-                    },
-                    "hasDefaultValue": true
-                },
-                {
-                    "type": "dataProperty",
-                    "name": "checkDependencies",
                     "valueType": {
                         "type": "dataTypeRefType",
                         "dataType": {
@@ -5818,17 +5790,17 @@
         },
         {
             "type": "org.gradle.internal.declarativedsl.analysis.DefaultFqName",
-            "packageName": "org.gradle.api.experimental.android.extensions",
-            "simpleName": "Hilt"
+            "packageName": "org.gradle.api.experimental.common.extensions",
+            "simpleName": "Lint"
         },
         {
             "type": "data",
             "name": {
                 "type": "org.gradle.internal.declarativedsl.analysis.DefaultFqName",
-                "packageName": "org.gradle.api.experimental.android.extensions",
-                "simpleName": "Hilt"
+                "packageName": "org.gradle.api.experimental.common.extensions",
+                "simpleName": "Lint"
             },
-            "javaTypeName": "org.gradle.api.experimental.android.extensions.Hilt",
+            "javaTypeName": "org.gradle.api.experimental.common.extensions.Lint",
             "javaTypeArgumentTypeNames": [],
             "supertypes": [
                 {
@@ -5841,6 +5813,34 @@
                 {
                     "type": "dataProperty",
                     "name": "enabled",
+                    "valueType": {
+                        "type": "dataTypeRefType",
+                        "dataType": {
+                            "type": "boolean"
+                        }
+                    },
+                    "mode": {
+                        "type": "org.gradle.internal.declarativedsl.analysis.DefaultDataProperty.DefaultPropertyMode.DefaultWriteOnly"
+                    },
+                    "hasDefaultValue": true
+                },
+                {
+                    "type": "dataProperty",
+                    "name": "xmlReport",
+                    "valueType": {
+                        "type": "dataTypeRefType",
+                        "dataType": {
+                            "type": "boolean"
+                        }
+                    },
+                    "mode": {
+                        "type": "org.gradle.internal.declarativedsl.analysis.DefaultDataProperty.DefaultPropertyMode.DefaultWriteOnly"
+                    },
+                    "hasDefaultValue": true
+                },
+                {
+                    "type": "dataProperty",
+                    "name": "checkDependencies",
                     "valueType": {
                         "type": "dataTypeRefType",
                         "dataType": {
@@ -7223,6 +7223,20 @@
                 },
                 {
                     "type": "dataProperty",
+                    "name": "targetSdk",
+                    "valueType": {
+                        "type": "dataTypeRefType",
+                        "dataType": {
+                            "type": "int"
+                        }
+                    },
+                    "mode": {
+                        "type": "org.gradle.internal.declarativedsl.analysis.DefaultDataProperty.DefaultPropertyMode.DefaultWriteOnly"
+                    },
+                    "hasDefaultValue": true
+                },
+                {
+                    "type": "dataProperty",
                     "name": "compileSdk",
                     "valueType": {
                         "type": "dataTypeRefType",
@@ -7238,20 +7252,6 @@
                 {
                     "type": "dataProperty",
                     "name": "jdkVersion",
-                    "valueType": {
-                        "type": "dataTypeRefType",
-                        "dataType": {
-                            "type": "int"
-                        }
-                    },
-                    "mode": {
-                        "type": "org.gradle.internal.declarativedsl.analysis.DefaultDataProperty.DefaultPropertyMode.DefaultWriteOnly"
-                    },
-                    "hasDefaultValue": true
-                },
-                {
-                    "type": "dataProperty",
-                    "name": "targetSdk",
                     "valueType": {
                         "type": "dataTypeRefType",
                         "dataType": {
@@ -7289,7 +7289,7 @@
                             "simpleName": "AndroidSoftware"
                         }
                     },
-                    "simpleName": "licenses",
+                    "simpleName": "hilt",
                     "parameters": [],
                     "isDirectAccessOnly": false,
                     "semantics": {
@@ -7301,7 +7301,7 @@
                                 "fqName": {
                                     "type": "org.gradle.internal.declarativedsl.analysis.DefaultFqName",
                                     "packageName": "org.gradle.api.experimental.android.extensions",
-                                    "simpleName": "Licenses"
+                                    "simpleName": "Hilt"
                                 }
                             }
                         },
@@ -7323,7 +7323,7 @@
                             "simpleName": "AndroidSoftware"
                         }
                     },
-                    "simpleName": "lint",
+                    "simpleName": "licenses",
                     "parameters": [],
                     "isDirectAccessOnly": false,
                     "semantics": {
@@ -7334,8 +7334,8 @@
                                 "type": "dataTypeRefName",
                                 "fqName": {
                                     "type": "org.gradle.internal.declarativedsl.analysis.DefaultFqName",
-                                    "packageName": "org.gradle.api.experimental.common.extensions",
-                                    "simpleName": "Lint"
+                                    "packageName": "org.gradle.api.experimental.android.extensions",
+                                    "simpleName": "Licenses"
                                 }
                             }
                         },
@@ -7391,7 +7391,7 @@
                             "simpleName": "AndroidSoftware"
                         }
                     },
-                    "simpleName": "hilt",
+                    "simpleName": "lint",
                     "parameters": [],
                     "isDirectAccessOnly": false,
                     "semantics": {
@@ -7402,8 +7402,8 @@
                                 "type": "dataTypeRefName",
                                 "fqName": {
                                     "type": "org.gradle.internal.declarativedsl.analysis.DefaultFqName",
-                                    "packageName": "org.gradle.api.experimental.android.extensions",
-                                    "simpleName": "Hilt"
+                                    "packageName": "org.gradle.api.experimental.common.extensions",
+                                    "simpleName": "Lint"
                                 }
                             }
                         },
@@ -7866,6 +7866,20 @@
                 },
                 {
                     "type": "dataProperty",
+                    "name": "targetSdk",
+                    "valueType": {
+                        "type": "dataTypeRefType",
+                        "dataType": {
+                            "type": "int"
+                        }
+                    },
+                    "mode": {
+                        "type": "org.gradle.internal.declarativedsl.analysis.DefaultDataProperty.DefaultPropertyMode.DefaultWriteOnly"
+                    },
+                    "hasDefaultValue": true
+                },
+                {
+                    "type": "dataProperty",
                     "name": "compileSdk",
                     "valueType": {
                         "type": "dataTypeRefType",
@@ -7881,20 +7895,6 @@
                 {
                     "type": "dataProperty",
                     "name": "jdkVersion",
-                    "valueType": {
-                        "type": "dataTypeRefType",
-                        "dataType": {
-                            "type": "int"
-                        }
-                    },
-                    "mode": {
-                        "type": "org.gradle.internal.declarativedsl.analysis.DefaultDataProperty.DefaultPropertyMode.DefaultWriteOnly"
-                    },
-                    "hasDefaultValue": true
-                },
-                {
-                    "type": "dataProperty",
-                    "name": "targetSdk",
                     "valueType": {
                         "type": "dataTypeRefType",
                         "dataType": {
@@ -8034,7 +8034,7 @@
                             "simpleName": "AndroidLibrary"
                         }
                     },
-                    "simpleName": "licenses",
+                    "simpleName": "hilt",
                     "parameters": [],
                     "isDirectAccessOnly": false,
                     "semantics": {
@@ -8046,7 +8046,7 @@
                                 "fqName": {
                                     "type": "org.gradle.internal.declarativedsl.analysis.DefaultFqName",
                                     "packageName": "org.gradle.api.experimental.android.extensions",
-                                    "simpleName": "Licenses"
+                                    "simpleName": "Hilt"
                                 }
                             }
                         },
@@ -8068,7 +8068,7 @@
                             "simpleName": "AndroidLibrary"
                         }
                     },
-                    "simpleName": "lint",
+                    "simpleName": "licenses",
                     "parameters": [],
                     "isDirectAccessOnly": false,
                     "semantics": {
@@ -8079,8 +8079,8 @@
                                 "type": "dataTypeRefName",
                                 "fqName": {
                                     "type": "org.gradle.internal.declarativedsl.analysis.DefaultFqName",
-                                    "packageName": "org.gradle.api.experimental.common.extensions",
-                                    "simpleName": "Lint"
+                                    "packageName": "org.gradle.api.experimental.android.extensions",
+                                    "simpleName": "Licenses"
                                 }
                             }
                         },
@@ -8136,7 +8136,7 @@
                             "simpleName": "AndroidLibrary"
                         }
                     },
-                    "simpleName": "hilt",
+                    "simpleName": "lint",
                     "parameters": [],
                     "isDirectAccessOnly": false,
                     "semantics": {
@@ -8147,8 +8147,8 @@
                                 "type": "dataTypeRefName",
                                 "fqName": {
                                     "type": "org.gradle.internal.declarativedsl.analysis.DefaultFqName",
-                                    "packageName": "org.gradle.api.experimental.android.extensions",
-                                    "simpleName": "Hilt"
+                                    "packageName": "org.gradle.api.experimental.common.extensions",
+                                    "simpleName": "Lint"
                                 }
                             }
                         },
@@ -10416,34 +10416,6 @@
                 },
                 {
                     "type": "dataProperty",
-                    "name": "compileSdk",
-                    "valueType": {
-                        "type": "dataTypeRefType",
-                        "dataType": {
-                            "type": "int"
-                        }
-                    },
-                    "mode": {
-                        "type": "org.gradle.internal.declarativedsl.analysis.DefaultDataProperty.DefaultPropertyMode.DefaultWriteOnly"
-                    },
-                    "hasDefaultValue": true
-                },
-                {
-                    "type": "dataProperty",
-                    "name": "jdkVersion",
-                    "valueType": {
-                        "type": "dataTypeRefType",
-                        "dataType": {
-                            "type": "int"
-                        }
-                    },
-                    "mode": {
-                        "type": "org.gradle.internal.declarativedsl.analysis.DefaultDataProperty.DefaultPropertyMode.DefaultWriteOnly"
-                    },
-                    "hasDefaultValue": true
-                },
-                {
-                    "type": "dataProperty",
                     "name": "buildConfig",
                     "valueType": {
                         "type": "dataTypeRefType",
@@ -10473,6 +10445,34 @@
                 {
                     "type": "dataProperty",
                     "name": "targetSdk",
+                    "valueType": {
+                        "type": "dataTypeRefType",
+                        "dataType": {
+                            "type": "int"
+                        }
+                    },
+                    "mode": {
+                        "type": "org.gradle.internal.declarativedsl.analysis.DefaultDataProperty.DefaultPropertyMode.DefaultWriteOnly"
+                    },
+                    "hasDefaultValue": true
+                },
+                {
+                    "type": "dataProperty",
+                    "name": "compileSdk",
+                    "valueType": {
+                        "type": "dataTypeRefType",
+                        "dataType": {
+                            "type": "int"
+                        }
+                    },
+                    "mode": {
+                        "type": "org.gradle.internal.declarativedsl.analysis.DefaultDataProperty.DefaultPropertyMode.DefaultWriteOnly"
+                    },
+                    "hasDefaultValue": true
+                },
+                {
+                    "type": "dataProperty",
+                    "name": "jdkVersion",
                     "valueType": {
                         "type": "dataTypeRefType",
                         "dataType": {
